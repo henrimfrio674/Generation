@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    inteiro vetor[10], i,media, soma = 0
+    para(i = 0; i < 10; i++){
+      escreva("Digite um número: ")
+      leia(vetor[i])
+    }
+    escreva("Vetor gerado: ")
+    para(i = 0; i < 10; i++){
+      escreva(vetor[i]," ")
+    }
+    escreva("\n","Numeros impares: ") 
+    para(i = 0; i < 10; i++){
+      se(vetor[i]%2 != 0){
+        escreva(vetor[i]," ")
+      }
+    }
+    escreva("\n","Numeros pares: ") 
+    para(i = 0; i < 10; i++){
+      se(vetor[i]%2 == 0){
+        escreva(vetor[i]," ")
+      }
+    }
+    
+    para(i = 0; i < 10; i++){
+      soma = soma + vetor[i]
+    }
+    escreva("\n","Numeros somados: ", soma) 
+    media = soma / 10
+    escreva("\n","Media: ", media)
+  }
+}
