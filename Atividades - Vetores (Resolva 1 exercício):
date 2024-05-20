@@ -1,0 +1,28 @@
+programa {
+  funcao inicio() {
+    inteiro vetor[10], i, i2, reserva
+    para(i = 0; i < 10; i++){
+      escreva("Digite um número: ")
+      leia(vetor[i])
+    }
+    escreva("Vetor gerado: ")
+    para(i = 0; i < 10; i++){
+      escreva(vetor[i]," ")
+    }
+    para(i2 = 0; i2 < 10; i2++){
+      para(i = 0; i < 10 - 1; i++){
+        se(vetor[i] < vetor[i + 1]){
+          reserva = vetor[i]
+          vetor[i] = vetor[i + 1]
+          vetor[i + 1] = reserva
+        }
+      }
+    }
+
+    escreva("\n","Vetor gerado: ")
+    para(i = 0; i < 10; i++){
+      escreva(vetor[i]," ")
+
+    }
+  }
+}
